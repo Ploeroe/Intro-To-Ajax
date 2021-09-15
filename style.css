@@ -34,7 +34,7 @@ tr:nth-child(even){
 }
 
 .button-posts:active{
-    background: none;
+    background: grey;
 }
 
 .button-posts:hover{
