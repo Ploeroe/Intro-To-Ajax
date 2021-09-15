@@ -45,7 +45,8 @@ function showPosts(data){
     tbody.innerHTML = '';
     for(idx = 0; idx < data.length; idx++){ // membuat row dengan kolom yang diinginkan
         let colID = '<td>'+data[idx].id+'</td>';
-        let colbody = '<td>'+data[idx].body+'</td>';
+        let colTitle = '<td>'+data[idx].title+'</td>';
+        let colBody = '<td>'+data[idx].body+'</td>';
         let btnShowComments = '<td><button class="button-comments" postId='+data[idx].id
         +' on click= "loadComments('+data[idx].id 
         + ')">Show Comments</button></td>'; // tombol untuk menampilkan comment pada post yang dipilih
