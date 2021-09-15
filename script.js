@@ -24,7 +24,8 @@ function loadUserData(){
         if(request.status >= 200 && request.status < 400){ // memastikan status request "OK"
             // mem-parse data menjadi Javascript object dan ditampung ke variabel dengan nama 'data'
             let data = JSON.parse(request.responseText);
-            console.log(data); // menampilkan data yang didapat
+            //console.log(data); // menampilkan data yang didapat
+            generateUserTable(data);
         }
         else{
             alert('Page Not Found');
