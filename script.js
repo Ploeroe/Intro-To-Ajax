@@ -39,3 +39,36 @@ function loadUserData(){
 function onDocumentFinish(){
     loadUserData();
 }
+function showPosts(data){
+    let idx = 0;
+    let tbody = document.getElementById('user-posts').querySelector('tbody');
+    tbody.innerHTML = '';
+    for(idx = 0; idx < data.length; idx++){ // membuat row dengan kolom yang diinginkan
+        let colID = '<td>'+data[idx].id+'</td>';
+        let colbody = '<td>'+data[idx].body+'</td>';
+        let btnShowComments = '<td><button class="button-comments" postId='+data[idx].id
+        +' on click= "loadComments('+data[idx].id 
+        + ')">Show Comments</button></td>'; // tombol untuk menampilkan comment pada post yang dipilih
+        let newRow = '<tr>'+colID+colTitle+colBody+btnShowComments+'</tr>';
+        tbody.innerHTML += newRow; // append row ke tbody
+    }
+}
+function loadPosts(id){
+    let request = new XMLHttpRequest();
+    let url = 'https://jsonplaceholder.typicode.com/posts/?userId='+id; // url dengan parameter userId
+    request.open('GET', url, true); // Open Request
+
+    request.onload = function(){
+        if(request.status >= 200 && request.status < 400){
+            let data = JSON.parse(request.responseText); // parse JSON menjadi Object
+            showPosts(data);
+        }
+        else{
+            alert('Page Not Found');
+        }
+    }
+    request.onerror = function(){
+        alert('Request Failed! Check your internet connection');
+    }
+    request.send(); //mengirim request
+}
