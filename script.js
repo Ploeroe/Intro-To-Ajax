@@ -7,9 +7,9 @@ function generateUserTable(data){
         let colName = '<td>' +data[idx].name+'</td>'; //membuat kolom nama
         let colEmail = '<td>' +data[idx].email+'</td>'; //membuat kolom email
         let colCompanyName = '<td>' +data[idx].company.name+'</td>'; //membuat kolom nama perusahaan
-        let btnShowPost = '<td><button class="button-post" userId=' +data[idx].id
+        let btnShowPost = '<td><button class="button-posts" userId=' +data[idx].id
                         +' onclick ="loadPosts('+data[idx].id
-                        +')">show Posts</button></td>'; // membuat tombol untuk menampilkan post user
+                        +')">Show Posts</button></td>'; // membuat tombol untuk menampilkan post user
         // membuat row sejumlah kolom yang ingin ditampilkan
         let newRow = '<tr>'+colID+colName+colEmail+colCompanyName+btnShowPost+'</tr>';
         tbody.innerHTML += newRow; // meng-append row ke dalam tbody
