@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Intro to AJAX</title>
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body onload="onDocumentFinish()">
     <h1 class="top">Users</h1>
     <table id="users">
@@ -23,6 +25,22 @@
             </tr>
         </tbody>
     </table>
-    
+    <h2 class="top">User Posts</h2>
+    <table class="user-posts">
+        <thead>
+            <tr>
+                <th>Post ID</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;" colspan="6">No Posts</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
