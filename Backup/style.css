@@ -51,37 +51,3 @@ tr:nth-child(even){
     display: inline-block;
     font-size: 16px;
 }
-
-.button-posts:active{
-    background: grey;
-}
-
-.button-posts:hover{
-    cursor: pointer;
-}
-
-/* Card */
-
-.card{
-    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.6);
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    width: 68.5%;
-}
-
-.cards{
-    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.6);
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    width: 90%;
-}
-
-.information{
-    text-align: center;
-}
-
-.comments{
-    text-align: left;
-}
